@@ -1,0 +1,5 @@
+project: rnshah9/sha3sum
+target: keccaksum
+
+cmds:
+  - cmd: /repo/keccaksum @@
