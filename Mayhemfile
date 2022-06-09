@@ -1,4 +1,4 @@
-project: rnshah9/sha3sum
+project: sha3sum
 target: keccaksum
 
 cmds:
