@@ -1,0 +1,5 @@
+project: sha3sum
+target: keccaksum
+
+cmds:
+  - cmd: /install/usr/local/bin/keccaksum @@
