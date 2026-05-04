@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 ubuntu:20.04 as builder
+FROM --platform=linux/amd64 ubuntu:22.04 as builder
 
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential git
@@ -14,6 +14,6 @@ RUN make -j8
 ENV DESTDIR=/install
 RUN make install
 
-FROM ubuntu:20.04 as package
+FROM ubuntu:22.04 as package
 COPY --from=builder /lib/libkeccak.so.1 /lib/libkeccak.so.1
 COPY --from=builder /install /install
